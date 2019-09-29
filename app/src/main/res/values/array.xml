@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="languageArray">
+        <item>@string/settings_language_default</item>
+        <item>English</item>
+        <item>简体中文（中国）</item>
+        <item>简体中文（新加坡）</item>
+        <item>简体中文（马来西亚）</item>
+        <item>繁体中文（香港）</item>
+        <item>繁体中文（澳門）</item>
+        <item>正體中文（台湾）</item>
+        <item>Español (Incompleto)</item>
+    </string-array>
+    <string-array name="languageValues">
+        <item>default</item>
+        <item>en</item>
+        <item>zh_CN</item>
+        <item>zh_SG</item>
+        <item>zh_SG</item>
+        <item>zh</item>
+        <item>zh</item>
+        <item>zh</item>
+        <item>es</item>
+    </string-array>
+
+    <string-array name="mapServiceArray">
+        <item>@string/settings_mapservice_openstreetmap</item>
+        <item>@string/settings_mapservice_bingmaps</item>
+        <item>@string/settings_mapservice_nokiamaps</item>
+        <item>@string/settings_mapservice_qwantmaps</item>
+    </string-array>
+    <string-array name="mapServiceValues">
+        <item>https://www.openstreetmap.org/?mlat=YYY&amp;mlon=XXX#map=15/YYY/XXX</item>
+        <item>https://www.bing.com/maps?q=YYY,XXX</item>
+        <item>https://wego.here.com/?map=YYY,XXX,14,normal</item>
+        <item>https://www.qwant.com/maps/#map=14/YYY/XXX</item>
+    </string-array>
+
+    <string-array name="autoFillPhoneAliases">
+        <item>@string/settings_autofill_item1</item>
+        <item>@string/settings_autofill_item2</item>
+        <item>@string/settings_autofill_item3</item>
+    </string-array>
+    <string-array name="autoFillPhoneValues">
+        <item>noFill</item>
+        <item>favorite</item>
+        <item>lastSent</item>
+    </string-array>
+</resources>

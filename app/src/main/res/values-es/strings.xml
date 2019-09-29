@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Share Location</string>
+    <string name="alertdialog_button_no">No</string>
+    <string name="title_activity_settings">Ajustes</string>
+    <string name="alertdialog_title_warning">Advertencia</string>
+    <string name="alertdialog_title_firstrun">¡Bienvenidos!</string>
+    <string name="alertdialog_button_yes">Sí</string>
+    <string name="alertdialog_button_continue">Siguiente</string>
+    <string name="alertdialog_button_cancel">Cancelar</string>
+    <string name="alertdialog_button_ok">Confirmar</string>
+    <string name="alertdialog_hint_phonenumber">Número de Teléfono</string>
+    <string name="mainactivity_button_select">Seleccionar</string>
+    <string name="alertdialog_button_learnmore_english">Aprende más (En inglés)</string>
+    <string name="alertdialog_button_checkagain">Cancelar</string>
+    <string name="alertdialog_button_looksgood">Confirmar</string>
+</resources>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/menu_contacts"
+        android:title="@string/title_activity_contacts" />
+
+    <item
+        android:id="@+id/settings"
+        android:title="@string/title_activity_settings" />
+
+    <item android:id="@+id/add_shortcut"
+        android:title="@string/mainactivity_button_addshortcut" />
+
+    <item android:id="@+id/quit_app"
+        android:title="@string/mainactivity_button_quit" />
+</menu>

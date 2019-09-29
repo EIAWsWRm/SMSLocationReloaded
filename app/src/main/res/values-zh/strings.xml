@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Share Location</string>
+    <string name="alertdialog_button_no">否</string>
+    <string name="alertdialog_button_yes">是</string>
+    <string name="alertdialog_title_warning">警告</string>
+    <string name="appstart_no_gps">您想不想啟用手機定位服務？</string>
+    <string name="appstart_no_gps_title">手機定位服務沒有打開</string>
+    <string name="button_send_sms">傳送簡訊</string>
+    <string name="button_share_location">用協力廠商應用程式分享位置</string>
+    <string name="settings_category_general">常用設定</string>
+    <string name="title_activity_settings">設定</string>
+    <string name="settings_language_title">語言</string>
+    <string name="settings_language_default">預設語言</string>
+    <string name="alertdialog_title_firstrun">歡迎！</string>
+    <string name="alertdialog_checkbox_nosmswarning">下次不要在提醒我</string>
+    <string name="alertdialog_hint_name">名字</string>
+    <string name="alertdialog_hint_phonenumber">電話</string>
+    <string name="mainactivity_button_select">選擇</string>
+    <string name="mainactivity_title_contacts">連絡人</string>
+    <string name="mainactivity_text_nocontacts">沒有找到連絡人</string>
+    <string name="alertdialog_title_help">説明</string>
+    <string name="alertdialog_button_ok">確認</string>
+    <string name="alertdialog_button_later">稍後再問</string>
+    <string name="alertdialog_button_learnmore_english">瞭解更多資訊（英語）</string>
+    <string name="alertdialog_button_cancel">取消</string>
+    <string name="alertdialog_button_checkagain">取消</string>
+    <string name="alertdialog_button_looksgood">確認</string>
+    <string name="alertdialog_button_continue">下一步</string>
+    <string name="contactsactivity_button_edit">編輯</string>
+    <string name="alertdialog_button_never">不要再問</string>
+</resources>

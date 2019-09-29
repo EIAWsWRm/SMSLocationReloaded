@@ -1,0 +1,222 @@
+<resources>
+    <string name="app_name">Share Location</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Strings related to Settings -->
+
+    <!-- Example General settings -->
+
+    <string-array name="pref_example_list_titles">
+        <item>Always</item>
+        <item>When possible</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_example_list_values">
+        <item>1</item>
+        <item>0</item>
+        <item>-1</item>
+    </string-array>
+
+    <!-- Example settings for Data & Sync -->
+
+    <string-array name="pref_sync_frequency_titles">
+        <item>15 minutes</item>
+        <item>30 minutes</item>
+        <item>1 hour</item>
+        <item>3 hours</item>
+        <item>6 hours</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_sync_frequency_values">
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+        <item>180</item>
+        <item>360</item>
+        <item>-1</item>
+    </string-array>
+
+    <string-array name="list_preference_entries">
+        <item>Entry 1</item>
+        <item>Entry 2</item>
+        <item>Entry 3</item>
+    </string-array>
+
+    <string-array name="list_preference_entry_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="multi_select_list_preference_default_value" />
+    <string name="settings_category_services">Network services</string>
+    <string name="settings_category_general">General</string>
+    <string name="appstart_no_gps">Location services are necessary for this application to run. Would you like to turn location services on?</string>
+    <string name="appstart_no_gps_title">Location services are off</string>
+    <string name="alertdialog_button_yes">Yes</string>
+    <string name="alertdialog_button_no">No</string>
+    <string name="button_share_location">Send with custom app</string>
+    <string name="sharedialog_title_sendlocation">Send location with...</string>
+    <string name="settings_language_default">System Default</string>
+    <string name="settings_language_title">Language</string>
+    <string name="settings_favphonenumber_title">Quick send phone number</string>
+    <string name="settings_favphonenumber_description">This phone number is used for the quick send shortcut on the home screen.</string>
+    <string name="button_send_sms">Send SMS</string>
+    <string name="settings_sms_title">SMS</string>
+    <string name="textbox_phonenumber_hint">Enter a phone number...</string>
+    <string name="alertdialog_title_warning">Warning</string>
+    <string name="alertdialog_text_smswarning">You are about to send a text message. This may incur charges. Are you sure you would like to continue?</string>
+    <string name="alertdialog_checkbox_nosmswarning">Don\'t show this warning again</string>
+    <string name="alertdialog_title_smserror">Text message failed to send</string>
+    <string name="alertdialog_text_phonepermission">Whoops! Looks like the text message failed to send. Don\'t worry, this is the case for most phones. The problem is probably caused by a permission know as \"READ_PHONE_STATE.\" For some phone models, a poorly implemented Android System causes the system to require the READ_PHONE_STATE permission for sending text messages. This is the ONLY phone permission we request (check the app\'s manifest if you want to make sure), so this app does NOT have the permissions to call numbers without your permission, receive any calls, or intercept call logs. Just grant us the permission on the next dialog and you\'ll be good to go! If you would like more information on why this happens, click \"Learn More\" below.</string>
+    <string name="alertdialog_button_continue">Continue</string>
+    <string name="alertdialog_button_learnmore_english">Learn More</string>
+    <string name="alertdialog_title_firstrun">Welcome!</string>
+    <string name="alertdialog_title_error">Error</string>
+    <string name="alertdialog_button_ok">OK</string>
+    <string name="alertdialog_text_nofavphone">You did not enter a favorite phone number in Settings and you set the auto-fill to auto-fill the favorite phone number. Please go to settings and enter a favorite phone number.</string>
+    <string name="alertdialog_text_invalidfavphone">Invalid favorite phone number. Please go to settings and make sure the favorite phone number only contains numbers and the \"+\" character (if applicable).</string>
+    <string name="alertdialog_text_nophonenumber">Please enter a phone number.</string>
+    <string name="mainactivity_title_contacts">Contacts</string>
+    <string name="mainactivity_text_nocontacts">No contacts found.\nAdd one by going to Menu -> Contacts</string>
+    <string name="alertdialog_hint_name">Contact Name</string>
+    <string name="alertdialog_hint_phonenumber">Phone Number</string>
+    <string name="alertdialog_button_cancel">Cancel</string>
+    <string name="shortcut_title_quicksend">Quick Send</string>
+    <string name="shortcut_desc_quicksend">Quickly send a text message to your favorite contact.</string>
+    <string name="mainactivity_button_addshortcut">Add Quick Send Shortcut</string>
+    <string name="notification_title_channelname">All Notifications</string>
+    <string name="notification_title_success">Success</string>
+    <string name="notification_content_success">Message has been sent</string>
+    <string name="notification_title_failure">Error</string>
+    <string name="notification_content_failure">Failed to send message</string>
+    <string name="toast_text_gpsoff">Location services been disabled. The location will not be updated until you re-enable location services.</string>
+    <string name="toast_text_gpson">Location services have been enabled.</string>
+    <string name="notification_title_sending">We are sending your message...</string>
+    <string name="notification_content_sending">This will take at most 60 seconds.</string>
+    <string name="alertdialog_title_shortcutcheck">Just making sure...</string>
+    <string name="alertdialog_text_shortcutcheck">Please ensure that you have done everything in this list before continuing:\n * Set a quick send phone number in settings.\n * Sent a test message with the app to make sure that everything works.</string>
+    <string name="alertdialog_button_looksgood">Looks good!</string>
+    <string name="alertdialog_button_checkagain">I\'ll check again</string>
+    <string name="title_activity_contacts">Contacts</string>
+    <string name="large_text">
+        "Material is the metaphor.\n\n"
+
+        "A material metaphor is the unifying theory of a rationalized space and a system of motion."
+        "The material is grounded in tactile reality, inspired by the study of paper and ink, yet "
+        "technologically advanced and open to imagination and magic.\n"
+        "Surfaces and edges of the material provide visual cues that are grounded in reality. The "
+        "use of familiar tactile attributes helps users quickly understand affordances. Yet the "
+        "flexibility of the material creates new affordances that supercede those in the physical "
+        "world, without breaking the rules of physics.\n"
+        "The fundamentals of light, surface, and movement are key to conveying how objects move, "
+        "interact, and exist in space and in relation to each other. Realistic lighting shows "
+        "seams, divides space, and indicates moving parts.\n\n"
+
+        "Bold, graphic, intentional.\n\n"
+
+        "The foundational elements of print based design typography, grids, space, scale, color, "
+        "and use of imagery guide visual treatments. These elements do far more than please the "
+        "eye. They create hierarchy, meaning, and focus. Deliberate color choices, edge to edge "
+        "imagery, large scale typography, and intentional white space create a bold and graphic "
+        "interface that immerse the user in the experience.\n"
+        "An emphasis on user actions makes core functionality immediately apparent and provides "
+        "waypoints for the user.\n\n"
+
+        "Motion provides meaning.\n\n"
+
+        "Motion respects and reinforces the user as the prime mover. Primary user actions are "
+        "inflection points that initiate motion, transforming the whole design.\n"
+        "All action takes place in a single environment. Objects are presented to the user without "
+        "breaking the continuity of experience even as they transform and reorganize.\n"
+        "Motion is meaningful and appropriate, serving to focus attention and maintain continuity. "
+        "Feedback is subtle yet clear. Transitions are efﬁcient yet coherent.\n\n"
+
+        "3D world.\n\n"
+
+        "The material environment is a 3D space, which means all objects have x, y, and z "
+        "dimensions. The z-axis is perpendicularly aligned to the plane of the display, with the "
+        "positive z-axis extending towards the viewer. Every sheet of material occupies a single "
+        "position along the z-axis and has a standard 1dp thickness.\n"
+        "On the web, the z-axis is used for layering and not for perspective. The 3D world is "
+        "emulated by manipulating the y-axis.\n\n"
+
+        "Light and shadow.\n\n"
+
+        "Within the material environment, virtual lights illuminate the scene. Key lights create "
+        "directional shadows, while ambient light creates soft shadows from all angles.\n"
+        "Shadows in the material environment are cast by these two light sources. In Android "
+        "development, shadows occur when light sources are blocked by sheets of material at "
+        "various positions along the z-axis. On the web, shadows are depicted by manipulating the "
+        "y-axis only. The following example shows the card with a height of 6dp.\n\n"
+
+        "Resting elevation.\n\n"
+
+        "All material objects, regardless of size, have a resting elevation, or default elevation "
+        "that does not change. If an object changes elevation, it should return to its resting "
+        "elevation as soon as possible.\n\n"
+
+        "Component elevations.\n\n"
+
+        "The resting elevation for a component type is consistent across apps (e.g., FAB elevation "
+        "does not vary from 6dp in one app to 16dp in another app).\n"
+        "Components may have different resting elevations across platforms, depending on the depth "
+        "of the environment (e.g., TV has a greater depth than mobile or desktop).\n\n"
+
+        "Responsive elevation and dynamic elevation offsets.\n\n"
+
+        "Some component types have responsive elevation, meaning they change elevation in response "
+        "to user input (e.g., normal, focused, and pressed) or system events. These elevation "
+        "changes are consistently implemented using dynamic elevation offsets.\n"
+        "Dynamic elevation offsets are the goal elevation that a component moves towards, relative "
+        "to the component’s resting state. They ensure that elevation changes are consistent "
+        "across actions and component types. For example, all components that lift on press have "
+        "the same elevation change relative to their resting elevation.\n"
+        "Once the input event is completed or cancelled, the component will return to its resting "
+        "elevation.\n\n"
+
+        "Avoiding elevation interference.\n\n"
+
+        "Components with responsive elevations may encounter other components as they move between "
+        "their resting elevations and dynamic elevation offsets. Because material cannot pass "
+        "through other material, components avoid interfering with one another any number of ways, "
+        "whether on a per component basis or using the entire app layout.\n"
+        "On a component level, components can move or be removed before they cause interference. "
+        "For example, a floating action button (FAB) can disappear or move off screen before a "
+        "user picks up a card, or it can move if a snackbar appears.\n"
+        "On the layout level, design your app layout to minimize opportunities for interference. "
+        "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
+        "when a user tries to pick up one of cards.\n\n"
+    </string>
+    <string name="contactsactivity_button_edit">Edit</string>
+    <string name="contactsactivity_text_nocontact">Add a contact by clicking \"Edit!\"</string>
+    <string name="alertdialog_title_editcontact">Enter a name and phone number</string>
+    <string name="mainactivity_button_select">Select</string>
+    <string name="contactsactivity_toast_nocomma">Error: The contact name cannot contain a comma.</string>
+    <string name="toast_text_success">Success</string>
+    <string name="alertdialog_title_help">Help</string>
+    <string name="alertdialog_button_never">Never</string>
+    <string name="alertdialog_button_later">Later</string>
+    <string name="alertdialog_text_contactshelp">Click on \"Edit\" to add or edit a contact. There will be two textboxes that pop up. Enter the name into the first one and the phone number into the second one. To delete a contact, leave both fields blank. Please note that neither field can contain a comma.</string>
+    <string name="settings_autofill_title">Phone Number Auto-fill</string>
+    <string name="settings_autofill_description">The phone number that will be filled into the text box when the app is opened</string>
+    <string name="mainactivity_text_nolocation">Location Not Available</string>
+    <string name="alertdialog_text_firstrun">Thank you for downloading this app. Let\'s get started!\n\nThe first step is to grant permissions. This app will now ask for permission to access your location, beaucse this app is all about sharing your location with others. Unfortunately, this app will not work properly without this permission. We will NOT send your location information anywhere except to the phone numbers and applications you specify. Please note that, should you choose to send to a third-party app, they may handle your information differently.</string>
+    <string name="settings_mapservice_bingmaps">Bing Maps</string>
+    <string name="settings_mapservice_openstreetmap">OpenStreetMap</string>
+    <string name="settings_mapservice_nokiamaps">Here WEGO (experimental)</string>
+    <string name="settings_mapservice_title">Map Service</string>
+    <string name="settings_autofill_item1">Don\'t auto-fill phone number</string>
+    <string name="settings_autofill_item2">Auto-fill with quick send phone number</string>
+    <string name="settings_autofill_item3">Auto-fill with the phone number that was last contacted (default)</string>
+    <string name="mainactivity_text_firstrundenied">You have opted to not show the welcome dialog again. Please grant location permissions in settings or reinstall.</string>
+    <string name="alertdialog_button_quit">Quit</string>
+    <string name="alertdialog_button_uninstall">Uninstall</string>
+    <string name="mainactivity_button_quit">Quit</string>
+    <string name="alertdialog_text_unsupported_android8">Sorry, your device does not support this feature. This feature is only available on Android 8.0 and above.</string>
+    <string name="alertdialog_text_nolocation">Could not get location information. Please try again later or turn on location services.</string>
+    <string name="settings_mapservice_qwantmaps">Qwant Maps (experimental)</string>
+
+    <!-- Example settings for Notifications -->
+
+</resources>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <PreferenceCategory android:title="@string/settings_category_general"
+        android:key="general">
+        <ListPreference android:title="@string/settings_language_title"
+            android:summary="%s"
+            android:key="locale"
+            android:defaultValue="default"
+            android:entries="@array/languageArray"
+            android:entryValues="@array/languageValues" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/settings_category_services"
+        android:key="services">
+        <ListPreference android:title="@string/settings_mapservice_title"
+            android:summary="%s"
+            android:key="mapService"
+            android:defaultValue="https://www.openstreetmap.org/?mlat=YYY&amp;mlon=XXX#map=15/YYY/XXX"
+            android:entries="@array/mapServiceArray"
+            android:entryValues="@array/mapServiceValues" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/settings_sms_title">
+        <EditTextPreference android:title="@string/settings_favphonenumber_title"
+            android:key="favPhoneNo"
+            android:summary="@string/settings_favphonenumber_description" />
+        <ListPreference android:title="@string/settings_autofill_title"
+            android:summary="@string/settings_autofill_description"
+            android:key="autoFillPhone"
+            android:defaultValue="lastSent"
+            android:entries="@array/autoFillPhoneAliases"
+            android:entryValues="@array/autoFillPhoneValues" />
+    </PreferenceCategory>
+</PreferenceScreen>
