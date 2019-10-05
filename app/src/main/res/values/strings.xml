@@ -216,6 +216,11 @@
     <string name="alertdialog_text_unsupported_android8">Sorry, your device does not support this feature. This feature is only available on Android 8.0 and above.</string>
     <string name="alertdialog_text_nolocation">Could not get location information. Please try again later or turn on location services.</string>
     <string name="settings_mapservice_qwantmaps">Qwant Maps (experimental)</string>
+    <string name="mainactivity_text_waitingforlocation">Scanning for location...</string>
+    <string name="settings_mapservice_yuhuinnovation">Native Application API (experimental)</string>
+    <string name="button_calculate_values">Calculate Values</string>
+    <string name="locationactivity_text_distance">Distance from your location:</string>
+    <string name="generic_text_unknown">Unknown</string>
 
     <!-- Example settings for Notifications -->
 

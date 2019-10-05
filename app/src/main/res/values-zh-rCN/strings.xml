@@ -76,4 +76,7 @@
     <string name="mainactivity_button_quit">退出</string>
     <string name="alertdialog_text_unsupported_android8">很抱歉，您的设备不支持本功能。为了使用本功能，请升级到Android 8.0。</string>
     <string name="alertdialog_text_nolocation">无法获得位置信息。请打开手机上的位置服务或稍后再试。</string>
+    <string name="mainactivity_text_waitingforlocation">获得位置中，请等待。。。</string>
+    <string name="button_calculate_values">计算</string>
+    <string name="generic_text_unknown">未知</string>
 </resources>

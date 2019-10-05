@@ -24,6 +24,7 @@
         android:layout_height="0dp"
         android:layout_marginBottom="24dp"
         android:text="@string/mainactivity_text_nolocation"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -146,5 +147,31 @@
         android:text="@string/mainactivity_button_select"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/fillContact2" />
+
+    <ProgressBar
+        android:id="@+id/noLocationProgress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="111dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:indeterminate="true"
+        android:max="100"
+        android:progress="26"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/noLocationText" />
+
+    <TextView
+        android:id="@+id/noLocationText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:text="@string/mainactivity_text_waitingforlocation"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/noLocationProgress"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

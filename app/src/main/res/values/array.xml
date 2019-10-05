@@ -28,12 +28,14 @@
         <item>@string/settings_mapservice_bingmaps</item>
         <item>@string/settings_mapservice_nokiamaps</item>
         <item>@string/settings_mapservice_qwantmaps</item>
+        <item>@string/settings_mapservice_yuhuinnovation</item>
     </string-array>
     <string-array name="mapServiceValues">
         <item>https://www.openstreetmap.org/?mlat=YYY&amp;mlon=XXX#map=15/YYY/XXX</item>
         <item>https://www.bing.com/maps?q=YYY,XXX</item>
         <item>https://wego.here.com/?map=YYY,XXX,14,normal</item>
         <item>https://www.qwant.com/maps/#map=14/YYY/XXX</item>
+        <item>https://www.yuhuinnovation.com/androidapi/v1?lat=YYY&amp;lon=XXX</item>
     </string-array>
 
     <string-array name="autoFillPhoneAliases">

@@ -49,6 +49,9 @@ public class MainActivity extends AppCompatActivity {
     String contactNumber2 = "";
     String contactNumber3 = "";
 
+    // Boolean determining if the current location is known
+    boolean isLocationKnown = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -238,6 +241,14 @@ public class MainActivity extends AppCompatActivity {
 
             TextView textView = findViewById(R.id.currentLocation);
             textView.setText(message);
+
+            if (!isLocationKnown) {
+                findViewById(R.id.noLocationProgress).setVisibility(View.GONE); // Set progressbar to invisible
+                findViewById(R.id.noLocationText).setVisibility(View.GONE); // Set text to invisible
+                findViewById(R.id.currentLocation).setVisibility(View.VISIBLE); // Set location to visible
+
+                isLocationKnown = true;
+            }
         }
 
         @Override
