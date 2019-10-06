@@ -161,12 +161,23 @@ public class FirstRunActivity extends AppCompatActivity {
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
+                            SharedPreferences SP = PreferenceManager.getDefaultSharedPreferences(FirstRunActivity.this);
+                            SharedPreferences.Editor editor = SP.edit();
                             if (checkSelfPermission(Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
                                 Toast.makeText(FirstRunActivity.this, R.string.firstrun_text_permissiongranted,
                                         Toast.LENGTH_LONG).show();
                             }
-                            else {
+                            else if (!shouldShowRequestPermissionRationale(Manifest.permission.ACCESS_FINE_LOCATION)
+                                    && SP.getString("firstAskLocation", "true").equals("false")) {
                                 requestPermissions(new String[]{Manifest.permission.ACCESS_FINE_LOCATION},101);
+                                Toast.makeText(FirstRunActivity.this, R.string.firstrun_text_permissiondisabled,
+                                        Toast.LENGTH_LONG).show();
+                            }
+                            else {
+                                // User did NOT check "Don't ask again"
+                                requestPermissions(new String[]{Manifest.permission.ACCESS_FINE_LOCATION},101);
+                                editor.putString("firstAskLocation", "false");
+                                editor.apply();
                             }
                             reloadListView();
                         }

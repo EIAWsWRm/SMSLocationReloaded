@@ -230,8 +230,9 @@
     <string name="firstrun_text_permissiongranted">Permission is already granted.</string>
     <string name="alertdialog_text_quickstart">This app is designed to quickly send a message containing your location and a link to a mapping service. (If you\'re wondering, that\'s why the location permission is required.) You can save up to 3 phone numbers for quick access and on newer devices (Android 8.0+), you can send a message right from your home screen. To start configuring these options, have a look in the settings. Because we have programmed this app to be as convenient as possible for you, you may be tempted to use this app while driving. All we ask is that you please use this app in accordance to your local laws.</string>
     <string name="alertdialog_title_quickstart">Quick Start Guide</string>
-    <string name="alertdialog_text_welcomemessage">Thanks you for downloading this app. Before we begin, here\'s a short list of things to review, and then you can be on your way!</string>
+    <string name="alertdialog_text_welcomemessage">Thank you for downloading this app. Before we begin, here\'s a short list of things to review, and then you can be on your way!</string>
     <string name="alertdialog_title_welcomemessage">Welcome!</string>
+    <string name="firstrun_text_permissiondisabled">It looks like you have checked \"Don\'t show again\" on the permissions request dialog for location. The location permission is required to continue. If you would like to continue using this app, you can either uninstall and reinstall the app or go to the app settings to manually grant the permission.</string>
 
     <!-- Example settings for Notifications -->
 
