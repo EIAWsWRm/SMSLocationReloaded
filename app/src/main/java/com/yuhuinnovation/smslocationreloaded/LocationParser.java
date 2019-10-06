@@ -14,6 +14,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -50,7 +52,11 @@ public class LocationParser extends AppCompatActivity {
             invalidLink = true;
         }
 
-        // TODO Register location listener
+        Spinner spinner = findViewById(R.id.mapServiceSpinner); //get spinner from xml
+        String[] spinnerItems = getResources().getStringArray(R.array.mapServiceArray);
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
+                android.R.layout.simple_spinner_dropdown_item, spinnerItems);
+        spinner.setAdapter(adapter); //set adapter to the one created above
 
     }
 

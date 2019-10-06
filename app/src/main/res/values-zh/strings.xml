@@ -29,4 +29,6 @@
     <string name="alertdialog_button_continue">下一步</string>
     <string name="contactsactivity_button_edit">編輯</string>
     <string name="alertdialog_button_never">不要再問</string>
+    <string name="alertdialog_button_agree">同意</string>
+    <string name="alertdialog_button_disagree">不同意</string>
 </resources>

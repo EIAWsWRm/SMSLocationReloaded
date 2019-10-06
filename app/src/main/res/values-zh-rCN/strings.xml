@@ -79,4 +79,9 @@
     <string name="mainactivity_text_waitingforlocation">获得位置中，请等待。。。</string>
     <string name="button_calculate_values">计算</string>
     <string name="generic_text_unknown">未知</string>
+    <string name="alertdialog_title_privacypolicy">隐私声明</string>
+    <string name="alertdialog_button_agree">同意</string>
+    <string name="alertdialog_button_disagree">不同意</string>
+    <string name="firstrun_text_disagreewithprivacy">为了使用本程序，必须同意隐私声明条款。</string>
+    <string name="alertdialog_title_welcomemessage">欢迎！</string>
 </resources>

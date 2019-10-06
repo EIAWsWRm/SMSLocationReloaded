@@ -23,6 +23,15 @@
         <item>es</item>
     </string-array>
 
+    <!-- Do not forget the change the keys if changing around the order of things!!! -->
+    <!-- These keys should not change after creation -->
+    <string-array name="mapServiceKeys">
+        <item>osm</item>
+        <item>bing</item>
+        <item>nokia</item>
+        <item>qwant</item>
+        <item>native</item>
+    </string-array>
     <string-array name="mapServiceArray">
         <item>@string/settings_mapservice_openstreetmap</item>
         <item>@string/settings_mapservice_bingmaps</item>

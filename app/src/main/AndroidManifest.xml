@@ -20,18 +20,23 @@
         android:roundIcon="@mipmap/ic_launcher_circle"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".FirstRunActivity"></activity>
         <activity android:name=".LocationParser">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
-                <data android:scheme="https"
+
+                <data
                     android:host="www.yuhuinnovation.com"
-                    android:pathPrefix="/androidapi/v1" />
-                <data android:scheme="http"
+                    android:pathPrefix="/androidapi/v1"
+                    android:scheme="https" />
+                <data
                     android:host="www.yuhuinnovation.com"
-                    android:pathPrefix="/androidapi/v1" />
-                <!-- note that the leading "/" is required for pathPrefix-->
+                    android:pathPrefix="/androidapi/v1"
+                    android:scheme="http" />
+                <!-- note that the leading "/" is required for pathPrefix -->
             </intent-filter>
         </activity>
 

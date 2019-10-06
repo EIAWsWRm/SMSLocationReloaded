@@ -102,37 +102,10 @@ public class MainActivity extends AppCompatActivity {
         //request permissions
         int permission = ContextCompat.checkSelfPermission(this,
                 Manifest.permission.ACCESS_FINE_LOCATION);
-        if (permission != PackageManager.PERMISSION_GRANTED) {
-            // Show dialog explaining why location permission is needed.
-            AlertDialog.Builder builder = new AlertDialog.Builder(this);
-            builder.setTitle(R.string.alertdialog_title_firstrun);
-            builder.setMessage(R.string.alertdialog_text_firstrun);
-
-            builder.setCancelable(false);
-            builder.setPositiveButton(R.string.alertdialog_button_continue, new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    // Request permissions
-                    requestPermissions(new String[]{Manifest.permission.ACCESS_FINE_LOCATION},101);
-                }
-            });
-            builder.setNeutralButton(R.string.alertdialog_button_uninstall, new DialogInterface.OnClickListener(){
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    Intent intent = new Intent();
-                    intent.setAction(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
-                    Uri uri = Uri.fromParts("package", getPackageName(), null);
-                    intent.setData(uri);
-                    startActivity(intent);
-                }
-            });;
-            builder.setNegativeButton(R.string.alertdialog_button_quit, new DialogInterface.OnClickListener(){
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    finishAndRemoveTask();
-                }
-            });
-            builder.create().show();
+        if (permission != PackageManager.PERMISSION_GRANTED || SP.getString("viewedIntro","false").equals("false")
+                || SP.getString("acceptedPrivacyPolicy","false").equals("false")) {
+            Intent intent = new Intent(this, FirstRunActivity.class);
+            startActivity(intent);
         }
         else {
             LocationManager mLocationManager = (LocationManager) getSystemService(LOCATION_SERVICE);

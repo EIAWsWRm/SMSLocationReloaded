@@ -14,4 +14,6 @@
     <string name="alertdialog_button_learnmore_english">Aprende más (En inglés)</string>
     <string name="alertdialog_button_checkagain">Cancelar</string>
     <string name="alertdialog_button_looksgood">Confirmar</string>
+    <string name="alertdialog_button_agree">Aceptar</string>
+    <string name="alertdialog_button_disagree">Discrepar</string>
 </resources>
