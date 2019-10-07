@@ -10,6 +10,8 @@ import android.preference.PreferenceManager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -29,7 +31,7 @@ public class FirstRunActivity extends AppCompatActivity {
     };
 
     int[] listviewImage = new int[]{
-            R.drawable.ic_close_red_24dp, R.drawable.ic_close_red_24dp, R.drawable.ic_close_red_24dp, R.drawable.ic_no_red_24dp,
+            R.drawable.ic_check_box_outline_blank_red_24dp, R.drawable.ic_check_box_outline_blank_red_24dp, R.drawable.ic_check_box_outline_blank_red_24dp, R.drawable.ic_no_red_24dp,
     };
 
     String[] listviewId = new String[]{
@@ -59,12 +61,36 @@ public class FirstRunActivity extends AppCompatActivity {
         reloadListView();
     }
 
+    // Menus
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_firstrun, menu);
+        return true;
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_help:
+                // Show help dialog
+                AlertDialog.Builder builder = new AlertDialog.Builder(FirstRunActivity.this);
+                builder.setTitle(R.string.alertdialog_title_welcomemessage);
+                builder.setMessage(R.string.alertdialog_text_welcomemessage);
+
+                builder.setPositiveButton(R.string.alertdialog_button_ok, null);
+                builder.create().show();
+                return true;
+            default:
+                return super.onContextItemSelected(item);
+        }
+    }
+
     private void reloadListView() {
         if (checkSelfPermission(Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
-            listviewImage[1] = R.drawable.ic_check_green_24dp;
+            listviewImage[1] = R.drawable.ic_check_box_red_24dp;
         }
         else {
-            listviewImage[1] = R.drawable.ic_close_red_24dp;
+            listviewImage[1] = R.drawable.ic_check_box_outline_blank_red_24dp;
         }
 
 
@@ -73,18 +99,18 @@ public class FirstRunActivity extends AppCompatActivity {
         SharedPreferences SP = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
         // Viewed the quick start guide?
         if (SP.getString("viewedIntro", "false").equals("true")) {
-            listviewImage[0] = R.drawable.ic_check_green_24dp;
+            listviewImage[0] = R.drawable.ic_check_box_red_24dp;
         }
         else {
-            listviewImage[0] = R.drawable.ic_close_red_24dp;
+            listviewImage[0] = R.drawable.ic_check_box_outline_blank_red_24dp;
         }
 
         isPrivacyAccepted = SP.getString("acceptedPrivacyPolicy","false");
         if (isPrivacyAccepted.equals("true")) {
-            listviewImage[2] = R.drawable.ic_check_green_24dp;
+            listviewImage[2] = R.drawable.ic_check_box_red_24dp;
         }
         else {
-            listviewImage[2] = R.drawable.ic_close_red_24dp;
+            listviewImage[2] = R.drawable.ic_check_box_outline_blank_red_24dp;
         }
 
         if (isPrivacyAccepted.equals("true") && checkSelfPermission(Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED
