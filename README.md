@@ -2,6 +2,7 @@
 SMS Location Project New Version.
 
 This project is the official SMS Location app from Yuhu Innovation. An app to share your location with your family and friends. If you'd rather not compile it from source, official APK downloads are from here: https://yuhuinnovation.com/android/
+
 MD5 checksum (MAKE SURE THIS CHECKSUM MATCHES THE ONE FROM THE DOWNLOADED FILE!): 3a37b54c67d8a1339cf217de76658640
 
 Features:
