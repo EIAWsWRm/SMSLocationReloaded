@@ -10,6 +10,13 @@
             android:defaultValue="default"
             android:entries="@array/languageArray"
             android:entryValues="@array/languageValues" />
+        <Preference
+            android:title="@string/settings_backup_title"
+            android:summary="@string/settings_backup_description">
+            <intent android:action="android.intent.action.VIEW"
+                android:targetPackage="com.yuhuinnovation.smslocationreloaded"
+                android:targetClass="com.yuhuinnovation.smslocationreloaded.BackupActivity" />
+        </Preference>
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/settings_category_services"
         android:key="services">

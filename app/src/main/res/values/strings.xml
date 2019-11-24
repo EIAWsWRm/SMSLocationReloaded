@@ -233,6 +233,16 @@
     <string name="alertdialog_text_welcomemessage">Thank you for downloading this app. Before we begin, here\'s a short list of things to review, and then you can be on your way!</string>
     <string name="alertdialog_title_welcomemessage">Welcome!</string>
     <string name="firstrun_text_permissiondisabled">It looks like you have checked \"Don\'t show again\" on the permissions request dialog for location. The location permission is required to continue. If you would like to continue using this app, you can either uninstall and reinstall the app or go to the app settings to manually grant the permission.</string>
+    <string name="settings_backup_title">Backup and Restore (Beta)</string>
+    <string name="settings_backup_description">Click here to back up and restore your settings. Experimental.</string>
+    <string name="button_backup_settings">Backup</string>
+    <string name="button_restore_settings">Restore</string>
+    <string name="backupactivity_invalid_format">Whoops! Looks like the file is not a valid backup file. Try again or select a different file.</string>
+    <string name="backupactivity_toast_failed">Could not open file. Please try again.</string>
+    <string name="alertdialog_title_restartapp">Restart to apply changes</string>
+    <string name="alertdialog_text_restartapp">The changes were successfully made. To fully apply the changes, the app must be restarted. Would you like to restart now?</string>
+    <string name="title_activity_backup">Backup and Restore</string>
+    <string name="backupactivity_text_description">You can back up and restore settings here. Click on \"Backup\" to open up a dialog to save a backup file (in .txt format). Click on \"Restore\" to open up a dialog where you can select a backup. This utility is currently in active development and features may change at any time.\n\nYou should know the limitations of this utility before using it. This utility WILL back up things like:\n * Language settings\n * The default map service\n\nThis utility currently WILL NOT (but may do so in the future) back up things like:\n * Saved contacts\n * The auto-filled phone number</string>
 
     <!-- Example settings for Notifications -->
 

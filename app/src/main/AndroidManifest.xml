@@ -20,7 +20,7 @@
         android:roundIcon="@mipmap/ic_launcher_circle"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".FirstRunActivity"></activity>
+        <activity android:name=".FirstRunActivity" />
         <activity android:name=".LocationParser">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
@@ -44,6 +44,11 @@
             android:name=".BackgroundSendService"
             android:enabled="true"
             android:exported="true" />
+
+        <activity android:name=".BackupActivity"
+            android:parentActivityName=".SettingsActivity">
+
+        </activity>
 
         <activity
             android:name=".ContactsActivity"
