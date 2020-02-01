@@ -19,6 +19,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.Arrays;
 import java.util.Locale;
 
 public class LocationParser extends AppCompatActivity {
@@ -193,24 +194,30 @@ public class LocationParser extends AppCompatActivity {
 
     }
 
-    public String getLatLonString(double lat, double lon) {
+    public String getLatLonLink(double lat, double lon) {
         //to read settings
-        SharedPreferences SP = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+        Spinner mapServiceSpinner = (Spinner) findViewById(R.id.mapServiceSpinner);
+        String mapService = mapServiceSpinner.getSelectedItem().toString();
 
-        String finalString = String.valueOf(lat) + ", " + String.valueOf(lon);
-        String mapLink = SP.getString("mapService",
-                "https://www.bing.com/maps?q=YYY,XXX"); //get URL string
+        String[] spinnerItems = getResources().getStringArray(R.array.mapServiceArray);
+        String[] mapServiceValues = getResources().getStringArray(R.array.mapServiceValues);
+
+        int mapServiceIndex = Arrays.asList(spinnerItems).indexOf(mapService); //get index of value in spinner
+
+        String mapLink = mapServiceValues[mapServiceIndex]; //get URL string
         mapLink = mapLink.replace("YYY", String.valueOf(lat)); //replace in latitude
         mapLink = mapLink.replace("XXX", String.valueOf(lon)); //replace in longitude
-        finalString = finalString + " // " + mapLink; //concatenate the strings
 
-        return finalString;
+        return mapLink;
     }
 
     // Called when the "Open" button is pressed
     public void onOpenWithPressed(View view) {
-        String latlonstring = getLatLonString(lat, lon);
-        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(latlonstring));
+        // TODO Error: No activity found to handle intent
+        String url = getLatLonLink(lat, lon);
+        Log.d("URL", url);
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+        intent.setData(Uri.parse(url));
         startActivity(intent);
     }
 }
