@@ -192,4 +192,25 @@ public class LocationParser extends AppCompatActivity {
         }
 
     }
+
+    public String getLatLonString(double lat, double lon) {
+        //to read settings
+        SharedPreferences SP = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+
+        String finalString = String.valueOf(lat) + ", " + String.valueOf(lon);
+        String mapLink = SP.getString("mapService",
+                "https://www.bing.com/maps?q=YYY,XXX"); //get URL string
+        mapLink = mapLink.replace("YYY", String.valueOf(lat)); //replace in latitude
+        mapLink = mapLink.replace("XXX", String.valueOf(lon)); //replace in longitude
+        finalString = finalString + " // " + mapLink; //concatenate the strings
+
+        return finalString;
+    }
+
+    // Called when the "Open" button is pressed
+    public void onOpenWithPressed(View view) {
+        String latlonstring = getLatLonString(lat, lon);
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(latlonstring));
+        startActivity(intent);
+    }
 }

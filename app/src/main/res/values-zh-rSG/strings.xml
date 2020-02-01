@@ -89,4 +89,5 @@
     <string name="button_restore_settings">恢复</string>
     <string name="backupactivity_toast_failed">错误。</string>
     <string name="title_activity_backup">备份与回复</string>
+    <string name="locationparser_button_open">打开</string>
 </resources>

@@ -243,6 +243,8 @@
     <string name="alertdialog_text_restartapp">The changes were successfully made. To fully apply the changes, the app must be restarted. Would you like to restart now?</string>
     <string name="title_activity_backup">Backup and Restore</string>
     <string name="backupactivity_text_description">You can back up and restore settings here. Click on \"Backup\" to open up a dialog to save a backup file (in .txt format). Click on \"Restore\" to open up a dialog where you can select a backup. This utility is currently in active development and features may change at any time.\n\nYou should know the limitations of this utility before using it. This utility WILL back up things like:\n * Language settings\n * The default map service\n\nThis utility currently WILL NOT (but may do so in the future) back up things like:\n * Saved contacts\n * The auto-filled phone number</string>
+    <string name="locationparser_button_open">Open</string>
+    <string name="locationparser_text_openwith">Open with...</string>
 
     <!-- Example settings for Notifications -->
 

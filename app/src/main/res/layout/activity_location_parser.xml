@@ -46,7 +46,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button"
+        app:layout_constraintEnd_toStartOf="@+id/mapServiceButton"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/mapServiceText" />
 
@@ -55,19 +55,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:text="TextView"
-        app:layout_constraintBaseline_toBaselineOf="@+id/button"
+        android:text="@string/locationparser_text_openwith"
+        app:layout_constraintBaseline_toBaselineOf="@+id/mapServiceButton"
         app:layout_constraintEnd_toStartOf="@+id/mapServiceSpinner"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/mapServiceButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
-        android:text="Button"
+        android:text="@string/locationparser_button_open"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"

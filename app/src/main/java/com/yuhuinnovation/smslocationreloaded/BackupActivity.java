@@ -72,6 +72,8 @@ public class BackupActivity extends AppCompatActivity {
             getBaseContext().getResources().updateConfiguration(config,
                     getBaseContext().getResources().getDisplayMetrics());
         }
+
+        setTitle(R.string.title_activity_backup);  // Set the title of the activity
     }
 
     @Override
