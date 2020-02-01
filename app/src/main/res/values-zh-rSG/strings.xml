@@ -90,4 +90,8 @@
     <string name="backupactivity_toast_failed">错误。</string>
     <string name="title_activity_backup">备份与回复</string>
     <string name="locationparser_button_open">打开</string>
+    <string name="alertdialog_title_notice">提示</string>
+    <string name="alertdialog_button_restartlater">稍后重启</string>
+    <string name="alertdialog_button_restartnow">现在重启</string>
+    <string name="alertdialog_text_preferencechanged">您更改的设置将在从其应用有效。您想现在重启应用吗？</string>
 </resources>

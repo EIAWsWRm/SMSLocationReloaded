@@ -1,15 +1,30 @@
 package com.yuhuinnovation.smslocationreloaded;
 
+import android.Manifest;
+import android.app.AlarmManager;
+import android.app.PendingIntent;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
+import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceManager;
+import android.provider.Settings;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.EditText;
+import android.widget.Toast;
 
+import java.io.FileOutputStream;
 import java.util.Locale;
 
 public class SettingsActivity extends AppCompatActivity {
+
+    // String to store the old locale data
+    private String oldLocale = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +34,9 @@ public class SettingsActivity extends AppCompatActivity {
         getFragmentManager().beginTransaction().replace(android.R.id.content, new MyPreferenceFragment()).commit();
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        SharedPreferences SP = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+        oldLocale = SP.getString("locale","default");
     }
 
     @Override
@@ -60,7 +78,34 @@ public class SettingsActivity extends AppCompatActivity {
 
     @Override
     public boolean onSupportNavigateUp(){
-        finish();
+        SharedPreferences SP = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+        String currentLocale = SP.getString("locale","default");
+        if (currentLocale.equals(oldLocale)) {
+            finish();
+        }
+        else {
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setTitle(R.string.alertdialog_title_notice);
+            builder.setMessage(R.string.alertdialog_text_preferencechanged);
+            builder.setPositiveButton(R.string.alertdialog_button_restartnow, new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    Intent mStartActivity = new Intent(getApplicationContext(), MainActivity.class);
+                    int mPendingIntentId = 123456;
+                    PendingIntent mPendingIntent = PendingIntent.getActivity(getApplicationContext(), mPendingIntentId, mStartActivity, PendingIntent.FLAG_CANCEL_CURRENT);
+                    AlarmManager mgr = (AlarmManager)getApplicationContext().getSystemService(Context.ALARM_SERVICE);
+                    mgr.set(AlarmManager.RTC, System.currentTimeMillis() + 100, mPendingIntent);
+                    finishAffinity();
+                }
+            });
+            builder.setNegativeButton(R.string.alertdialog_button_restartlater, new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    finish();
+                }
+            });
+            builder.create().show();
+        }
         return true;
     }
 
